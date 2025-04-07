@@ -11,14 +11,22 @@ window.geometry("600x400")
 label = tkinter.Label(window, text = "(1-100) clicks per minute")
 label.pack()
 
-#Button to start the click
-
-
 #drop down menu to select numbers 1-100
 numbers = [str(i) for i in range(1, 101)]
 selected_option = tkinter.StringVar()
 dropdown = ttk.Combobox(window, textvariable=selected_option, values=numbers)
 dropdown.pack(pady = 20)
+
+def autoclicker_function(selected_option):
+
+
+#Button to start the click
+buttonStart = tkinter.Button(window, text = "Start Click", command = autoclicker_function())
+buttonStart.pack()
+
 window.mainloop()
+
+
+
 
 
