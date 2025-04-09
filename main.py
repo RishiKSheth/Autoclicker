@@ -1,6 +1,8 @@
 import pyautogui
 import tkinter
 from tkinter import ttk
+import _thread
+import time, itertools
 
 #window tkinter
 window = tkinter.Tk()
@@ -17,11 +19,11 @@ selected_option = tkinter.StringVar()
 dropdown = ttk.Combobox(window, textvariable=selected_option, values=numbers)
 dropdown.pack(pady = 20)
 
-def autoclicker_function(selected_option):
-
+def autoclicker_function():
+    
 
 #Button to start the click
-buttonStart = tkinter.Button(window, text = "Start Click", command = autoclicker_function())
+buttonStart = tkinter.Button(window, text = "Start Click", command = autoclicker_function)
 buttonStart.pack()
 
 window.mainloop()
